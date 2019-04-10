@@ -1,0 +1,5 @@
+# first get permission:
+su "enter password"
+
+# then
+hostname "chosen hostname, example: chaboi" 

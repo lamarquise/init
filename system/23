@@ -1,0 +1,9 @@
+# The "normal" or graphic way:
+1) if not loged out, do so
+2) login as desired user
+3) input that user's password
+
+# or using ssh:
+
+ssh user@ip
+# where ip gathered from machine you are trying to access remotely.

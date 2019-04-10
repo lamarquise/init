@@ -1,0 +1,15 @@
+ls -l /etc/init.d | grep root | rev | cut -d ' ' -f1 | rev
+
+# they are daemons
+
+console-setup.sh
+cron
+dbus
+hwclock.sh
+keyboard-setup.sh
+kmod
+networking
+procps
+rsyslog
+ssh
+udev

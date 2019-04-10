@@ -1,0 +1,3 @@
+# it doesn't actually happen because we don't have permission to edit /etc/hosts, but if we did, running the followng would add the address and corresponding name.
+
+echo "46.19.122.85 intra.42.fr" >> /etc/hosts

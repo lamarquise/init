@@ -1,0 +1,3 @@
+# in traceroute slash16.org the second gateway is nat-1 and it's address is the last one to start with 10 as in it's local.
+
+nat-1 (10.60.1.11)

@@ -1,0 +1,5 @@
+du -hsP /var/*
+
+# -h is memory in megabytes or kilobytes or what have you
+# -s is display only the total
+# -P is to not folow sym links

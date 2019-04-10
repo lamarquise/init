@@ -1,0 +1,6 @@
+pkill tail
+
+# or
+
+pgrep tail | xargs kill
+# by default kill is kill 15, sigterm

@@ -1,0 +1,7 @@
+# using cat:
+
+/etc/*-release
+
+# or
+
+/proc/version

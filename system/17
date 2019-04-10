@@ -1,0 +1,4 @@
+ip address on the VM to get its ip
+#then
+ssh user@ip
+# and enter password

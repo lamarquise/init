@@ -1,0 +1,2 @@
+#ipconfig getifaddr en0 | xargs nslookup | grep '=' | cut -d ' ' -f3 | cut -d '.' -f1-3
+e1r3p16.42.fr
