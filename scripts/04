@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# save_copy.sh
+
+save="save_${1}.txt"
+
+find_file=$(ls -a | grep "${1}")
+find_save=$(ls -a ${save_path} | grep "${save}")
+
+save_path="/Users/$USER"
+
+save ()
+{
+	echo "a little farther"
+	for s in $find_save
+	do
+		echo "still farther"
+		if [ "$s" == "$save" ]
+		then
+			echo "this is 0"
+			return 0
+		fi
+	done
+	return 1
+}
+
+if [ $# -ne 1 ]
+then
+	echo "Usage: sh ${0} <file_to_be_saved>"
+	exit
+else
+	for f in $find_file
+	do
+		if [ "$f" = ${1} ]
+		then
+			echo "we made it"
+			save $f
+			ret=$?
+			if [ $ret -eq 0 ]
+			then
+				echo "still here"
+				echo "$(cat ${1})" > ${save_path}/save_${1}.txt
+				exit
+			fi
+		fi
+	done
+	echo "no file to save to"
+fi
+

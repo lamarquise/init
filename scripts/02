@@ -8,16 +8,17 @@ check_user()
 {
 	for u in $USER_LOG
 	do
-		if [ "u" == "$1" ]
+		if [ "$u" = $1 ]
+		then
 			return 0
 		fi
 	done
 	return 1
 }
 
-if [ $# -ne 1 ];
+if [ $# -eq 0 ]
 then
-	echo "Usage: ./${0} <username>"
+	echo "Usage: sh ${0} <username>"
 	exit
 else
 	USER=$1
@@ -28,9 +29,9 @@ fi
 
 if [ $ret -eq 0 ]
 then
-	if [ "$EUID" -ne 0 ]
+	if [ "$USER" = root ]
 	then
-		echo "Must run as root"
+		echo "You can't delete root"
 		exit
 	else
 		killall -KILL -u $USER > /dev/null 2>&1
